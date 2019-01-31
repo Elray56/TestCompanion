@@ -1,5 +1,5 @@
 {
-  "name": "TestComp",
+  "name": "testcompanion",
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "2a48e072-87cf-434e-929f-5ee168c26787",
     "appType": "app",
-    "appDisplayName": "Test Comp",
+    "appDisplayName": "Test Companion",
     "iconFile": "resources/icon.png",
     "wipeColor": "#009688",
     "requestedPermissions": [

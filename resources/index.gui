@@ -1,3 +1,5 @@
 <svg>
-  <text id="status" />
+  <textarea id="response" width="100%-10" text-length="500" x="5%" y="15%+15" font-family="System-Regular" fill="white" >
+  Press up to send file, down to display queue to console
+  </textarea>
 </svg>

@@ -5,7 +5,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
+async function sendfile(){
 outbox
    .enqueueFile("/mnt/assets/resources/styles.css")
    .then((ft) => {
@@ -15,28 +15,33 @@ outbox
    .catch((error) => {
      console.log(`Failed to schedule transfer: ${error}`);
    });
+  }
 
-document.onkeypress = function (evt) {
+  document.onkeypress = function (evt) {
     console.log("Key pressed: " + evt.key);
-    checkqueue();
-};
+    if (evt.key == "up"){
+       sendfile();
+    }
+    if (evt.key == "down"){
+      checkqueue();
+      }
+  };
 
 async function checkqueue(){
   //var queued=true;
-  console.log("Checking queued"); 
+  console.log("Checking queue"); 
 
   //while (queued){
     outbox
       .enumerate()
       .then((ft)=>{
-         console.log("ft:"+ft.length);
+         console.log("Number of enqueued files:"+ft.length);
          if (ft.length==0){
             console.log("No Files queued"); 
             queued=false;
          }
-         console.log(ft.length+" Files queued"); 
          for (var x=0;x<ft.length;x++){
-              console.log("Still enqueued:"+ft[x].name);
+              console.log("File enqueued:"+ft[x].name);
          }
          })
       .catch((ex)=>{
