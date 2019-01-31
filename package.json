@@ -1,0 +1,37 @@
+{
+  "name": "TestComp",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "^3.0.0",
+    "@fitbit/sdk-cli": "^1.5.0"
+  },
+  "fitbit": {
+    "appUUID": "2a48e072-87cf-434e-929f-5ee168c26787",
+    "appType": "app",
+    "appDisplayName": "Test Comp",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#009688",
+    "requestedPermissions": [
+      "access_location",
+      "access_internet",
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "higgs"
+    ],
+    "i18n": {
+      "en": {
+        "name": "TestComp"
+      }
+    }
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
+  },
+  "dependencies": {
+    "eslint": "^5.12.1"
+  }
+}

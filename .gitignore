@@ -1,0 +1,10 @@
+*.zip
+*.bak
+*.php
+*.db
+*.xlsx
+RunMinify.bat
+*.bat
+Dialogtemp.js
+/node_modules
+/build 
